@@ -21,5 +21,15 @@ usuarioCtrl.consulta = async(req, res) => {
     const usuario = await Usuario.findOne({where: {identificacion: laidentificacion}});
     res.json(usuario);
 }
+usuarioCtrl.autenticar = async(req, res) => {
+    const  laidentificacion  = req.params.identificacion;
+    console.log(req.body.identificacion)
 
+    const usuario = await Usuario.findOne({
+        where: {
+            identificacion: req.body.identificacion,
+            rol: req.body.rol,
+            clave: req.body.clave}});
+    res.json(usuario);
+}
 module.exports = usuarioCtrl;

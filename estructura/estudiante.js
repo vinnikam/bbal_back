@@ -6,7 +6,7 @@ class Estudiante extends Model{}
 Estudiante.init({
     tipoidentificacion: {
         type: DataTypes.ENUM({
-            values: ['Tarjeta de Identidad', 'Cédula Ciudadanía']
+            values: ['T.I.', 'C.C.']
         })
     },
     identificacion: {

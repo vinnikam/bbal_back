@@ -6,7 +6,7 @@ class Usuario extends Model{}
 Usuario.init({
     tipoidentificacion: {
         type: DataTypes.ENUM({
-            values: ['Tarjeta Identidad', 'Cédula Ciudadanía']
+            values: ['T.I.', 'C.C.']
         })
     },
     identificacion: {
@@ -22,9 +22,12 @@ Usuario.init({
         type: DataTypes.STRING
 
     },
+    clave: {
+        type: DataTypes.STRING
+    },
     rol: {
         type: DataTypes.ENUM({
-            values: ['Administrador', 'Empleado']
+            values: ['Administrador', 'Empleado', 'Entrenador', 'Representante', 'Jugador']
         })
     },
 
