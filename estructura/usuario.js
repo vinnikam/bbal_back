@@ -20,7 +20,6 @@ Usuario.init({
     },
     estado: {
         type: DataTypes.STRING
-
     },
     clave: {
         type: DataTypes.STRING

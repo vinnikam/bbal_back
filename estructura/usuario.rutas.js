@@ -6,4 +6,5 @@ module.exports = (router)=>{
     router.get('/usuario/', usuario.consultar);
     router.post('/usuario/autenticar', usuario.autenticar);
     router.get('/usuario/:identificacion', usuario.consulta);
+    router.post('/usuario/validar', usuario.validar);
 }

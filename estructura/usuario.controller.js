@@ -21,6 +21,13 @@ usuarioCtrl.consulta = async(req, res) => {
     const usuario = await Usuario.findOne({where: {identificacion: laidentificacion}});
     res.json(usuario);
 }
+usuarioCtrl.validar = async(req, res) => {
+    const  laidentificacion  = req.body.identificacion;
+    const  eltiidentificacion  = req.body.tipoidentificacion;
+    const usuario = await Usuario.findOne({where: {identificacion: laidentificacion,
+            tipoidentificacion: eltiidentificacion}});
+    res.json(usuario);
+}
 usuarioCtrl.autenticar = async(req, res) => {
     const  laidentificacion  = req.params.identificacion;
     console.log(req.body.identificacion)
